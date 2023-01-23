@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/abf9d968cb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+        </script>
+        <script>
+            $( function() {
+              $( "#menu" ).menu();
+            } );
+            </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>ABC Learning Center</title>
+</head>
+<body>
+  <div class="random">
+    <nav id="eznavbar">
+        <div class="logo">
+            <h4>ABC Learning Center</h4>
+        </div>
+        <ul id="tesmenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="course.html">COURSES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="sitemap.html">SITEMAP</a></li>
+            <li><a href="privacy.html">PRIVACY POLICY</a></li>
+            <li><a href="form.html" style="color: red;">REGISTER</a></li>
+        </ul>
+    </nav>
+</div>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
+                <ul id="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="course.html">COURSES</a>
+                       <ul class="menu-res">
+                         <li><a href="course-java.html">Java Programming Course</a></li>
+                         <li><a href="course-net.html">.NET Programming Course</a></li>
+                         <li><a href="schedule-java.html">Java Course Schedule</a></li>
+                         <li><a href="schedule-net.html">.NET Course Schedule</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="sitemap.html">SITEMAP</a></li>
+                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                    <li><a href="form.html" style="color: red;">REGISTER</a></li>
+                </ul>
+               </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Courses</h1>
+
+    </section>
+
+    <!---Courses content-->
+
+    <section class="course">
+        <h1>Available Courses</h1>
+        <p>Below we provide list of courses that you can choose.</p>
+
+        <div class="row">
+            <div class="course-col1">
+                <h3>PROGRAMMING IN JAVA</h3>
+                <p>Java is a general-purpose, class-based, object-oriented programming language designed for having lesser implementation dependencies. 
+                  It is a computing platform for application development. Java is fast, secure, and reliable, therefore. 
+                  It is widely used for developing Java applications in laptops, data centers, 
+                  game consoles, scientific supercomputers, cell phones, etc.</p>
+                    
+                    <a href="course-java.html" class="course-btn black-btn">More details. . .</a>
+                    <a href="schedule-java.html" class="course-btn black-btn">Course Schedule</a>
+
+            </div>
+            <div class="course-col1">
+                <h3>PROGRAMMING IN .NET</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Aliquam lobortis tortor ac sapien mollis iaculis. Etiam rhoncus ipsum id vestibulum faucibus. 
+                    Quisque a eros quam. Morbi auctor commodo porta. 
+                    Ut scelerisque justo metus, et venenatis leo maximus vitae. 
+                    Vestibulum nec rutrum est.</p>
+
+                    <a href="course-net.html" class="course-btn black-btn">More details. . .</a>
+                    <a href="schedule-net.html" class="course-btn black-btn">Course Schedule</a>
+            </div>
+     
+    </section>
+
+
+    <!---Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>ABC Learning Center is a IT Training institute that provide various courses for student to learn and
+          become a programmer.<br> Founded on 2010, we produce many successful graduates throughout the year.
+      </p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <p>Copyright <i class="fa-solid fa-copyright"></i> Steffansim</p>
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+<!---JavaScript for TOGGLE MENU-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

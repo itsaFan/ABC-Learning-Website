@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/leadUI/admin_styles.css">
+    <script src="https://kit.fontawesome.com/abf9d968cb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>ABC : Administration Page</title>
+</head>
+<body>
+
+    <section class="form">
+        <div class="popup" id="popup">
+            <div id="container">
+                <form role="form">
+                    <h2>Admin Edit</h2><br>
+                    <div class="form-group">
+                        <input type="text" id="title" placeholder="Please write your full name" required />
+                        <label class="firstlabel">Full Name</label>
+                    </div> 
+        
+                    <h2 class="name">Email</h2>
+                    <input type="text" class="email" name="email" id="email" placeholder="email" required>
+                    <label class="firstlabel">Email</label>
+
+                    
+                    <div id="name">
+                        <h2 class="name">Contact Info</h2>
+                        <input type="text" class="number" name="contact_number" id="phone" required>
+                        <label class="phone">Phone Number</label>
+                        <input type="text" class="address" name="user_address" id="add" required>
+                        <label class="user-address">Address</label>
+                        <input type="text" class="zip-code" name="domain_code" id="zcode" required>
+                        <label class="domain-code">Zip Code</label>
+                    </div><br>
+        
+                    <div id="name" class="s-course">
+                        <h2 class="select-course">Select Course</h2>
+                        <select class="option" name="course" id="scourse">
+                            <option disabled="disabled" selected="selected">---Choose Option---</option>
+                            <option>Java Programming</option>
+                            <option>.NET Programming</option>
+                        </select>
+                    </div><br>
+        
+                <div class="sub-button" id="name"> 
+                    <button type="button" >Add New</button>          
+                    <button type="submit" onclick="saveExit()">Save & Exit</button>   
+                </div>       
+                </form>
+            </div>
+        </div>
+    </section>
+
+        
+            <div class="tab-position">
+                <div class="admin-header" id="output">
+                    <h2>REGISTERED USER LIST</h2>
+                    
+                </div>
+            </div>
+            <div class="table-container">
+                <a href="javascript:void(0);" class="aright" id="btnClearData">Clear All User Data[<span id="dataCount">0</span>]</a>
+                <input type="search" class="searchbar" id="search" placeholder="Search...">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Addrress</th>
+                            <th>Zip Code</th>
+                            <th>Course Selected</th>
+                            <th>Admin Control</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+
+<!-- Main script -->
+<script type="text/javascript" src="leadUI/localstorage.js"></script>
+<!-- Popup Edit Script -->
+<script>
+    let popup = document.getElementById("popup");
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function saveExit(){
+        popup.classList.remove("open-popup");
+    }
+</script>
+
+</body>
+</html>

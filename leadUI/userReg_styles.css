@@ -1,0 +1,484 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+
+body {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(
+      circle,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(30, 54, 59, 1) 0%,
+      rgba(93, 93, 116, 1) 100%
+    );
+    font-family: sans-serif;
+  }
+
+.form {
+  padding: 70px;
+}
+
+.regform {
+    width: 800px;
+    background-color: rgb(0,0,0,0.5);
+    margin: auto;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+.border {
+  background-color: rgb(0,0,0,0.5);
+  width: 800px;
+  margin: auto;
+}
+
+form {
+  padding: 10px;
+}
+
+#name {
+  width: 100%;
+  height: 100px;
+}
+
+.name {
+  margin-left: 25px;
+  margin-top: 30px;
+  width: 125px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fullname {
+  position: relative;
+  left: 200px;
+  top: -22px;
+  line-height: 40px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  width: 480px;
+}
+
+/* span thingy */
+
+.span-js-fs {
+  color: red;
+  font-size: 12px;
+  position: relative;
+  left: 260px;
+  top: -65px;
+}
+.span-js-ls {
+  color: red;
+  font-size: 12px;
+  position: relative;
+  left: 95px;
+  top: -65px;
+}
+#submit-error {
+  color: red;
+  position: relative;
+  top: 19px;
+  left: -700px;
+}
+
+.email {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+.number {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+.address {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+  margin: 25px 0px;
+}
+.zip-code {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+.phone {
+  position: relative;
+  color: #E5e5e5;
+  text-transform: capitalize;
+  font-size: 14px;
+  left: -45px;
+  top: -5px;
+}
+.user-address {
+  position: relative;
+  color: #E5e5e5;
+  text-transform: capitalize;
+  font-size: 14px;
+  left: -329px;
+  top: -5px;
+}
+.domain-code {
+  position: relative;
+  color: #E5e5e5;
+  text-transform: capitalize;
+  font-size: 14px;
+  left: -45px;
+  top: -5px;
+}
+
+.radio{
+  display: flex;
+  align-items: center;
+}
+.pinfo-label {
+  color: #E5e5e5;
+  position: relative;
+  left: 30px;
+  top: 15px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+.radio input {
+  position: relative;
+  left: 30px;
+  top: 15px;
+  padding: 0 22px;
+}
+.radio p {
+  position: relative;
+  left: 30px;
+  top: 15px;
+  padding: 0 22px;
+  color: #E5e5e5;
+}
+
+.bday{
+  display: flex;
+  align-items: center;
+}
+.bday-label {
+  color: #E5e5e5;
+  position: relative;
+  left: 180px;
+  top: -35px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+.bday input {
+  position: relative;
+  left: 200px;
+  top: -35px;
+  padding: 0 22px;
+}
+
+.idcard{
+  display: flex;
+  align-items: center;
+}
+.idcard-label {
+  color: #E5e5e5;
+  position: relative;
+  left: 180px;
+  top: -50px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+.idcard input {
+  position: relative;
+  left: 150px;
+  top: -50px;
+  padding: 0 22px;
+}
+
+.select-course {
+  position: relative;
+  top: 80px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 25px;
+  margin-top: 30px;
+}
+.option {
+  position: relative;
+  top: 60px;
+  left: 200px;
+}
+.sub-button {
+  position: relative;
+  left: 70%;
+  top: 30px;
+}
+button[type=submit], button[type=reset] {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+/*----- NAV -----*/
+nav {
+  display: flex;
+  background-color: rgba(4,9,30,0.7);
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  color: rgba(227, 229, 235, 0.8);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+nav ul li a {
+  color: rgba(227, 229, 235, 0.8);
+  text-decoration: none;
+  font-size: 0.8em;
+}
+nav .logo {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2.5px;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  color: #F34E2B;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgba(227, 229, 235, 0.8);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+  background-color: #F34E2B;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+  background-color: #F34E2B;
+  transform: rotate(-45deg);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+  opacity: 0;
+  transform: scale(0);
+}
+
+
+/* Tab Sizing */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+
+
+/*----- Footer -----*/
+
+.footer{
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(banner-bottom.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4{
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: lightgrey;
+}
+.footer p{
+  color: lightgrey;
+}
+.icons .fa-brands{
+  color:#F34E2B;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+/* Sticky Nav */
+
+nav.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background: black;
+  justify-content: space-around;
+  transition: padding 1s;
+  z-index: 2;
+}
+
+nav.sticky ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+
+/* User Hide */
+
+.none {
+    display: none;
+}
+
+/* CSS Validation */
+.name-valid span{
+  position: relative;
+  left: -50px;
+  top: -20px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #F34E2B;
+  text-align: right;
+}
+.name-valid i{
+  color: green;
+  position: relative;
+  left: 210px;
+  top: -1px;
+}
+.email-valid span{
+  position: relative;
+  left: 40px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #F34E2B;
+}
+.email-valid i{
+  color: green;
+  position: relative;
+  left: 100px;
+}
+.phone-valid span{
+  position: relative;
+  left: 90px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #F34E2B;
+}
+.phone-valid i{
+  color: green;
+  position: relative;
+  left: -50px;
+}
+.zipcode-valid span{
+  position: relative;
+  left: 120px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #F34E2B;
+}
+.zipcode-valid i{
+  color: green;
+  position: relative;
+  left: -33px;
+}
+.address-valid span{
+  position: relative;
+  left: -30px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #F34E2B;
+}
+.address-valid i{
+  color: green;
+  position: relative;
+  left: 120px;
+}

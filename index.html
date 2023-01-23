@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/abf9d968cb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+        </script>
+        <script>
+            $( function() {
+              $( "#menu" ).menu();
+            } );
+            </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>ABC Learning Center</title>
+</head>
+<body>
+<div class="random">
+    <nav id="eznavbar">
+        <div class="logo">
+            <h4>ABC Learning Center</h4>
+        </div>
+        <ul id="tesmenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="course.html">COURSES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="sitemap.html">SITEMAP</a></li>
+            <li><a href="privacy.html">PRIVACY POLICY</a></li>
+            <li><a href="form.html" style="color: red;">REGISTER</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <section class="header" id="section1">
+        <nav>
+            <a href="index.html"><img src="logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
+                   <ul id="menu">
+                       <li><a href="index.html" >HOME</a></li>
+                       <li><a href="course.html">COURSES</a>
+                          <ul class="menu-res">
+                            <li class="dropwdown-1"><a href="course-java.html">Java Programming Course</a></li>
+                            <li class="dropwdown-1"><a href="course-net.html">.NET Programming Course</a></li>
+                            <li class="dropwdown-1"><a href="schedule-java.html">Java Course Schedule</a></li>
+                            <li class="dropwdown-1"><a href="schedule-net.html">.NET Course Schedule</a></li>
+                          </ul>
+                       </li>
+                       <li><a href="about.html">ABOUT</a></li>
+                       <li><a href="contact.html">CONTACT</a></li>
+                       <li><a href="sitemap.html">SITEMAP</a></li>
+                       <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                       <li><a href="form.html" style="color: red;">REGISTER</a></li>
+                   </ul>
+               </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>ABC Learning Center</h1>
+            <p>
+                In this era, software engineering is in high demand globally.<br>
+                Our institue offers high quality course for you to learn and become software engineer.
+            </p>
+            <a href="#section2" class="hero-btn">Click Here To Know More</a>
+        </div>
+    </section>
+
+    <!--Course-->
+    <section class="course" id="section2">
+        <h1>Available Courses</h1>
+        <p>Below we provide list of courses that you can choose.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>PROGRAMMING IN JAVA</h3>
+                <p>Java is a general-purpose, class-based, object-oriented programming language designed 
+                    for having lesser implementation dependencies. 
+                    It is a computing platform for application development. Java is fast, secure, and reliable, therefore. 
+                    It is widely used for developing Java applications in laptops, data centers, 
+                    game consoles, scientific supercomputers, cell phones, etc.</p>
+            </div>
+            <div class="course-col">
+                <h3>PROGRAMMING IN .NET</h3>
+                <p>.NET is a software development framework and ecosystem designed and supported 
+                    by Microsoft to allow for easy desktop and web application engineering. 
+                    It&lsquo;s a popular free platform currently used for a lot of different types of applications as 
+                    it provides the programming environment for most software development phases.
+                     .NET best suits businesses that look for a wide range of features like 
+                     web-based services, desktop software, and cloud infrastructure support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!---What we offers-->
+    <section class="offers">
+        <h1>What We Offers</h1>
+        <div class="row">
+            <div class="offers-col">
+                <img src="teacher.jpg">
+                <div class="layer">
+                    <h3>PROFESSIONAL<br>MENTOR</h3>
+                </div>
+            </div>
+            <div class="offers-col">
+                <img src="intern.jpg">
+                <div class="layer">
+                    <h3>INTERNSHIP</h3>
+                </div>
+            </div>
+            <div class="offers-col">
+                <img src="computer.jpg">
+                <div class="layer">
+                    <h3>ON CAMPUS <br>COMPUTER</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---Purpose jQuery Tabs-->
+    <section>
+        <div class="container" id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Visions</a></li>
+              <li><a href="#tabs-2">Mission</a></li>
+              <li><a href="#tabs-3">Values</a></li>
+            </ul>
+            <div id="tabs-1">
+              <p>To be a prime national educational resource for applying total transformational 
+                  principles that empower future leaders to transform people in a
+                   balanced and integrated manner; to enhance knowledge and technology; 
+                   to develop good character and attitude</p>
+            </div>
+            <div id="tabs-2">
+              <p>To prepare the students in their respective fields to become academically proficient professionals who respond ethically and strategically to the challenges of the future, who are able to solve problems creatively, who can seize opportunities proactively for the benefit of their organizations and communities, and who can realize their life goals. 
+                  To support academic and professional staff in their collegiate endeavors enhancing their quality of life and service to others</p>
+            </div>
+            <div id="tabs-3">
+              <p>Student-Focus <br>
+                  Professionalism <br>
+                  Intergrity <br>
+                  Hardwork <br>
+              </p>
+            </div>
+          </div>
+    </section>
+
+
+    <!---Contact us-->
+    <section class="cta">
+        <h1>Enroll for Our Courses <br> Anywhere and Anytime Online</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!---Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>ABC Learning Center is a IT Training institute that provide various courses for student to learn and
+            become a programmer.<br> Founded on 2010, we produce many successful graduates throughout the year.
+        </p>
+        
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <p>Copyright <i class="fa-solid fa-copyright"></i> Steffansim</p>
+    </section>
+
+
+
+<script type="text/javascript" src="script.js"></script>
+<!---JavaScript for TOGGLE MENU-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>

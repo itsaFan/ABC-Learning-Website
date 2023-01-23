@@ -1,0 +1,871 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 250px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F34E2B;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid lightgrey;
+    background: lightgrey;
+    transition:1s;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa-solid{
+        display:block;
+        color: #fff;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+
+    }
+}
+
+/*---- course ----*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 47%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 30px 0px rgb(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*---- What we Offers ----*/
+
+.offers{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.offers-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.offers-col img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(221,221,221,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/*----- call to action or contact us -----*/
+
+.cta{
+    margin: 100px auto;
+    width: 95%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color:#fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 21px;
+    }
+}
+
+/*----- Footer -----*/
+
+.footer{
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(banner-bottom.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: lightgrey;
+}
+.footer p{
+    color: lightgrey;
+}
+.icons .fa-brands{
+    color:#F34E2B;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/*----- About Us HTML -----*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(sub-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 105px;
+}
+
+.about-us{
+    width: 80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 45%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+.black-btn{
+    border: 1px solid black;
+    background: transparent;
+    color: black;
+}
+
+/*----- Course HTML -----*/
+
+.course-col1{
+    flex-basis: 47%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;  
+}
+.course-col1:hover{
+    box-shadow: 0 0 30px 0px rgb(0,0,0,0.2);
+}
+.course-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.course-btn:hover{
+    border: 1px solid black;
+    background: white;
+    transition:1s;
+}
+
+/*----- Contact HTML -----*/
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 45%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.contact-col div .fa-solid{
+    font-size: 28px;
+    color:#F34E2B;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.contact-btn:hover{
+    border: 1px solid #F34E2B;
+    background: #F34E2B;
+    transition:1s;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/*----- Sitemap HTML -----*/
+
+.sitemap{
+    width: 90%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.sitemap-row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.sitemap-col{
+    flex-basis: 47%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.sitemap-col h2{
+    padding-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.sitemap-col li{
+    padding-bottom: 8px;
+    position: relative;
+    color: #F34E2B;
+    font-weight: 500;
+}
+.sitemap-col a{
+    color:#555;
+    transition: 0.5s;
+}
+.sitemap-col a:hover{
+    color: #F34E2B;
+}
+.sitemap-pic{
+    flex-basis: 60%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+.sitemap-pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*----- Privacy HTML -----*/
+
+.privacy{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.privacy-box{
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 5px 50px;
+    box-sizing: border-box;
+    transition: 0.5s;  
+}
+.privacy-box li{
+    position: relative;
+    left: 40px; 
+}
+.privacy-box:hover{
+    box-shadow: 0 0 30px 0px rgb(0,0,0,0.2);
+}
+.privacy h1{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-weight: 480;
+}
+.privacy h2{
+    margin-top: 5%;
+}
+.privacy h3{
+    text-align: center;
+    text-decoration:underline;
+    margin-top: 5%;
+}
+
+/*----- Course Java Page HTML -----*/
+
+.course-java{
+    width: 80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.cjava-col{
+    flex-basis: 45%;
+    padding: 30px 2px;
+}
+.cjava-col img{
+    width: 100%;
+}
+.cjava-col h1{
+    padding-top: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+.cjava-col p{
+    padding: 5px 0 25px;
+    font-size: 17px;
+    font-style:italic;
+    font-weight: bold;
+}
+.cjava-col1{
+    flex-basis: 45%;
+    padding: 30px 2px;
+}
+.cjava-col1 img{
+    width: 100%;
+}
+.cjava-col1 h1{
+    padding-top: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+.cjava-col1 p{
+    padding: 5px 0 25px;
+    font-size: 17px;
+}
+.c-bg{
+    background-color: darkblue;
+    color:lightslategrey;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 35px;
+}
+.cjava-bg h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+.cjava-bg li{
+    margin-bottom: 1px;
+    text-align: left;
+    list-style-position: outside;
+    padding: 5px 0 10px 38%;
+    text-indent: -1em;
+    position: relative;
+}
+
+/*----- Testimonials -----*/
+
+.testi{
+    width: 85%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testi-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display:flex;
+}
+.testi-col img{
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testi-col p{
+    padding: 0;
+}
+.testi-col h3{
+    margin-top: 35px;
+    text-align: right;
+}
+@media(max-width: 700px){
+    .testi-col img{
+        margin-left: 0px;
+        margin-right: 15px;   
+    }
+}
+
+/*----- Course NET Page HTML (most css using Java Page HTML) -----*/
+
+.cnet-pad li{
+    margin-bottom: 1px;
+    text-align: left;
+    list-style-position: outside;
+    padding: 5px 0 10px 28%;
+    text-indent: -1em;
+    position: relative;
+}
+.cnet-bg{
+    background-color: darkred;
+    color:lightslategrey;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 35px;
+}
+
+
+/*----- Calendar -----*/
+
+.header-cal{
+    background-color: #f34c2b7c;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    border: solid 1px;
+    text-transform: uppercase;
+}
+.body-cal{
+    text-transform: uppercase;
+}
+.main-cal{
+    margin-top: 100px;
+}
+.main-cal li{
+    background-color: #fff3f3;
+    border: solid 0.5px #868484;
+    padding: 5px;
+    text-align: center;
+    height: 15px;
+}
+.calendar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.month{
+    background-color: #fff;
+    border: solid #868484;
+}
+.month h1{
+    background-color: #868484;
+    color: rgb(240, 234, 234);
+    text-align: center;
+    padding: 4px;
+}
+.days,
+.date{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style-type: none;
+    gap: 4px;
+    margin: 5px;
+}
+.days li{
+    background-color: #dadff7;
+    font-weight: 1000;
+}
+.space-topbot{
+    padding-top: 150px;
+}
+.prev-month,
+.prev-month~li{
+    opacity: 0.3;
+}
+.first-day,
+.first-day~li{
+    opacity: 1!important;
+    font-weight: 700;
+}
+.last-day~li{
+    opacity: 0.3!important;
+}
+li:nth-child(7n+1){
+    color: #F34E2B;
+}
+li:nth-child(7n+7){
+    color: #F34E2B;
+}
+.holiday{
+    background-color: #F34E2B !important;
+}
+.java-curi{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+td, th {
+    border-style: hidden;
+    text-align: left;
+    padding: 8px;
+  }
+tr:nth-child(even) {
+    background-color: #2be6f318;
+}
+.cal-col{
+    flex-basis: 45%;
+    padding: 30px 2px;
+}
+.cal-col h2{
+    border-bottom: solid 5px #2be6f318;
+}
+.notd-mid{
+    text-align: center;
+}
+
+
+/*----- Dropdown -----*/
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  
+  .show {display: block;}
+  
+  /*.dropdown a:hover {background-color: #f44336;}
+  
+   .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+
+/*----- Tabs Jquery CSS -----*/
+
+.container{
+    width:50%;
+    background-color: #fff3f3;
+    margin: 50px auto;
+    padding: 50px 20px;
+    border-radius: 20px;
+    border: solid 2px rgba(4,9,30,0.4);
+}
+.container ul{
+    margin-left: 40px;
+    text-align: center;
+    padding-bottom: 35px;
+}
+.container a{
+    color:#555;
+    font-style: italic;
+    text-decoration: none;
+}
+.container ul li{
+    background-color: #eaeaea;
+    color: red;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px; 
+    cursor: pointer;
+    transition: 2s;
+}
+.container ul li:hover{
+    background-color: #F34E2B;
+    color: #fff;
+    font-size: 25px;
+}
+.container p{
+    color: #555;
+    text-align: center;
+}
+.container p:not(:first-of-type){
+    display: none;
+}
+
+/*----- Menu Jquery CSS -----*/
+
+
+.menu-res {
+    width: 120px;
+    color: #F34E2B;  
+    display: block;
+    position: absolute;
+    transition: 0.3s ease;
+    text-align: left;
+    padding-top: 30px;
+}
+.menu-res:hover{
+    background-color: rgba(221,221,221,0.2);
+    color: #F34E2B;
+    position:absolute;  
+    text-align: left;
+}
+
+
+/* Newly added nav */
+
+.random nav {
+    display: none;
+    background-color: rgba(4,9,30,0.7);
+    justify-content: space-around;
+    height: 5px;
+    align-items: center;
+    color: rgba(227, 229, 235, 0.8);
+  }
+  
+ .random nav ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-between;
+  }
+.random  nav ul li a {
+    color: rgba(227, 229, 235, 0.8);
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+.random  nav .logo {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 20px;
+    position: relative;
+    left: -250px;
+  }
+.random  nav ul li a:hover {
+    color: #F34E2B;
+  }
+
+/* Sticky Nav */
+
+nav.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    background: rgba(4,9,30,0.9);
+    justify-content: space-around;
+    transition: padding 1s;
+    z-index: 2;
+  }
+  
+  nav.sticky ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+  }
+  
+  
